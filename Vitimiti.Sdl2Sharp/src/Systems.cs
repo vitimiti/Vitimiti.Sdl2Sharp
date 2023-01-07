@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
-using System.Runtime.InteropServices;
 
 using Vitimiti.Sdl2Sharp.Marshaling;
+using Vitimiti.Sdl2Sharp.Utilities;
 
 namespace Vitimiti.Sdl2Sharp;
 
@@ -28,7 +28,7 @@ public sealed class Systems : IDisposable
         var code = Sdl.Init(flags);
         if (code < 0)
         {
-            throw new ExternalException(Sdl.GetError(), code);
+            throw new SdlSharpException(Sdl.GetError(), code);
         }
     }
 
@@ -64,7 +64,7 @@ public sealed class Systems : IDisposable
         var code = Sdl.InitSubSystems(flags);
         if (code < 0)
         {
-            throw new ExternalException(Sdl.GetError(), code);
+            throw new SdlSharpException(Sdl.GetError(), code);
         }
     }
 

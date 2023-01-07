@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-using Vitimiti.Sdl2Sharp.Utilities;
+﻿using Vitimiti.Sdl2Sharp.Utilities;
 
 namespace Vitimiti.Sdl2Sharp.Examples.HelloSdl;
 
@@ -18,7 +16,7 @@ internal static class Program
                 Console.WriteLine($"SDL v{Systems.Version} is {comparator} than the supported SDL v{Systems.SupportedVersion} and some functionality may not be available");
             }
         }
-        catch (ExternalException e)
+        catch (SdlSharpException e)
         {
             Console.Error.WriteLine(e);
         }
