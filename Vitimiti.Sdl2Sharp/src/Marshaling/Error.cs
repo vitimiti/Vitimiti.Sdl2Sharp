@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 using Vitimiti.Sdl2Sharp.CustomMarshalers;
 
-namespace Vitimiti.Sdl2Sharp.Marshal;
+namespace Vitimiti.Sdl2Sharp.Marshaling;
 
 internal static partial class Sdl
 {

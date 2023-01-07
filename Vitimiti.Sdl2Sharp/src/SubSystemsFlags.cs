@@ -1,7 +1,7 @@
 namespace Vitimiti.Sdl2Sharp;
 
 [Flags]
-public enum SystemFlags : uint
+public enum SubSystemsFlags : uint
 {
     None = 0x00000000U,
     Timer = 0x00000001U,

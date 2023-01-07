@@ -1,17 +1,17 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-using Vitimiti.Sdl2Sharp.Marshal;
+using Vitimiti.Sdl2Sharp.Marshaling;
 
 namespace Vitimiti.Sdl2Sharp;
 
-public sealed class System : IDisposable
+public sealed class Systems : IDisposable
 {
     private bool _disposedValue;
 
-    public static SystemFlags InitializedSystemFlags => Sdl.WasInit(SystemFlags.Everything);
+    public static SubSystemsFlags InitializedSystemFlags => Sdl.WasInit(SubSystemsFlags.Everything);
 
-    public System(SystemFlags flags)
+    public Systems(SubSystemsFlags flags)
     {
         var code = Sdl.Init(flags);
         if (code < 0)
@@ -33,7 +33,7 @@ public sealed class System : IDisposable
         }
     }
 
-    ~System()
+    ~Systems()
     {
         // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
         Dispose(disposing: false);
@@ -47,7 +47,7 @@ public sealed class System : IDisposable
     }
 
     [SuppressMessage("Performance", "CA1822: Mark members as static", Justification = "Avoid using this function outside of the dispose pattern.")]
-    public void StartSubSystems(SystemFlags flags)
+    public void StartSubSystems(SubSystemsFlags flags)
     {
         var code = Sdl.InitSubSystems(flags);
         if (code < 0)
@@ -57,7 +57,7 @@ public sealed class System : IDisposable
     }
 
     [SuppressMessage("Performance", "CA1822: Mark members as static", Justification = "Avoid using this function outside of the dispose pattern.")]
-    public void StopSubSystems(SystemFlags flags)
+    public void StopSubSystems(SubSystemsFlags flags)
     {
         Sdl.QuitSubSystems(flags);
     }
