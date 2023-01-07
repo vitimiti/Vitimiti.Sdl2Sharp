@@ -2,38 +2,67 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build-example-001-win-x64",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
                 "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "/property:SimulatedRuntimeIdentifier=win-x64"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
+            "label": "build-example-001-win-x86",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "publish",
+                "build",
                 "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "/property:SimulatedRuntimeIdentifier=win-x86"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "build-example-001-osx-x64",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "watch",
-                "run",
-                "--project",
-                "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj"
+                "build",
+                "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/property:SimulatedRuntimeIdentifier=osx-x64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-001-osx-arm64",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/property:SimulatedRuntimeIdentifier=osx-arm64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-example-001-linux-x64",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/property:SimulatedRuntimeIdentifier=linux-x64"
             ],
             "problemMatcher": "$msCompile"
         }

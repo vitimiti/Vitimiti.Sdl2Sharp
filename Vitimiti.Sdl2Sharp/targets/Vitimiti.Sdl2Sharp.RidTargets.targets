@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <RuntimeIdentifiers>win-x64;win-x86;osx-x64;osx-arm64;linux-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+    <Content Include="$(PkgVitimiti_Sdl2Sharp)\runtimes\win-x64\native\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x86'">
+    <Content Include="$(PkgVitimiti_Sdl2Sharp)\runtimes\win-x86\native\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'osx-x64' Or '$(RuntimeIdentifier)' == 'osx-arm64'">
+    <Content Include="$(PkgVitimiti_Sdl2Sharp)\runtimes\osx\native\libSDL2.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
+    <Content Include="$(PkgVitimiti_Sdl2Sharp)\runtimes\linux-x64\native\libSDL2.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

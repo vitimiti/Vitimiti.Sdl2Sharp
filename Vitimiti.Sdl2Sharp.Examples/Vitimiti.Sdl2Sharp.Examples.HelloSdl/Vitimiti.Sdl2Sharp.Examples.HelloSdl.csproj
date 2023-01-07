@@ -7,8 +7,53 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- This may be one of: win-x64, win-x86, osx-x64, osx-arm64 or linux-x64 and works instead of
+    using "RuntimeIdentifiers" -->
+    <SimulatedRuntimeIdentifier>win-x64</SimulatedRuntimeIdentifier>
+  </PropertyGroup>
+
+  <!-- If you are including the nuget package, do the following:
+  <ItemGroup>
+    <PackageReference Include="Vitimiti.SdlSharp" Version="2.0.20" GeneratePathProperty="true"/>
+  </ItemGroup>
+  And then use the $(PkgVitimiti_SharpSdl2)\targets\Vitimiti.Sdl2Sharp.RidTargets.targets to
+  generate the configurations necessary for the runtimes.
+  If you are including the entire project, do as here: -->
   <ItemGroup>
     <ProjectReference Include="..\..\Vitimiti.Sdl2Sharp\Vitimiti.Sdl2Sharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(SimulatedRuntimeIdentifier)' == 'win-x64'">
+    <Content Include="..\..\runtimes\win-x64\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>targets/</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(SimulatedRuntimeIdentifier)' == 'win-x86'">
+    <Content Include="..\..\runtimes\win-x86\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>targets/</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(SimulatedRuntimeIdentifier)' == 'osx-x64' Or '$(SimulatedRuntimeIdentifier)' == 'osx-arm64'">
+    <Content Include="..\..\runtimes\osx\libSDL2.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>targets/</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(SimulatedRuntimeIdentifier)' == 'linux-x64'">
+    <Content Include="..\..\runtimes\linux-x64\libSDL2.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>targets/</PackagePath>
+      <Pack>true</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>

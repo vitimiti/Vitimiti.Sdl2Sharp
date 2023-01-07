@@ -5,10 +5,74 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": ".NET Core Launch (console)",
+            "name": "Launch Example 001 - Windows x64",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build-example-001-win-x64",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/bin/Debug/net6.0/Vitimiti.Sdl2Sharp.Examples.HelloSdl.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Example 001 - Windows x86",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-001-win-x86",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/bin/Debug/net6.0/Vitimiti.Sdl2Sharp.Examples.HelloSdl.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Example 001 - OSX x64",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-001-osx-x64",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/bin/Debug/net6.0/Vitimiti.Sdl2Sharp.Examples.HelloSdl.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Example 001 - OSX ARM64",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-001-osx-arm64",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/bin/Debug/net6.0/Vitimiti.Sdl2Sharp.Examples.HelloSdl.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Example 001 - Linux x64",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-example-001-linux-x64",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/Vitimiti.Sdl2Sharp.Examples/Vitimiti.Sdl2Sharp.Examples.HelloSdl/bin/Debug/net6.0/Vitimiti.Sdl2Sharp.Examples.HelloSdl.dll",
             "args": [],

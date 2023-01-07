@@ -1,0 +1,1 @@
+Put the libSDL2.dylib for osx (multiarch) (x86_64 + arm64) v2.0.20 here.

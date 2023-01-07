@@ -1,0 +1,1 @@
+Put the libSDL2.so for linux-x64 (x86_64) v2.0.20 here.

@@ -1,0 +1,1 @@
+Put the SDL2.dll for win-x86 (x86) v2.0.20 here.
