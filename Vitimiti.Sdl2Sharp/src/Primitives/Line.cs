@@ -1,8 +1,8 @@
-namespace Vitimiti.Sdl2Sharp.Primitives;
-
 using System.Drawing;
 
 using Vitimiti.Sdl2Sharp.Marshaling;
+
+namespace Vitimiti.Sdl2Sharp.Primitives;
 
 public class Line : IEquatable<Line>
 {
