@@ -2,7 +2,7 @@ using Vitimiti.Sdl2Sharp.Marshaling;
 using Vitimiti.Sdl2Sharp.SafeHandles;
 using Vitimiti.Sdl2Sharp.Utilities;
 
-namespace Vitimiti.Sdl2Sharp.Cpu;
+namespace Vitimiti.Sdl2Sharp.Utilities.Cpu;
 
 public sealed class Simd : IDisposable
 {

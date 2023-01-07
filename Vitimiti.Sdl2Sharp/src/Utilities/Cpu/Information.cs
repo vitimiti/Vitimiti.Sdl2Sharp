@@ -1,6 +1,6 @@
 using Vitimiti.Sdl2Sharp.Marshaling;
 
-namespace Vitimiti.Sdl2Sharp.Cpu;
+namespace Vitimiti.Sdl2Sharp.Utilities.Cpu;
 
 public static class Information
 {
