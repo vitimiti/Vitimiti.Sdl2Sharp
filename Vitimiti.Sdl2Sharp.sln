@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitimiti.Sdl2Sharp", "Vitimiti.Sdl2Sharp\Vitimiti.Sdl2Sharp.csproj", "{A8CAF61F-7628-47AF-9BE9-836E76612E6C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vitimiti.Sdl2Sharp.Examples", "Vitimiti.Sdl2Sharp.Examples", "{6F0CF140-BB6E-46DC-A834-343B1A3B0C4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitimiti.Sdl2Sharp.Examples.HelloSdl", "Vitimiti.Sdl2Sharp.Examples\Vitimiti.Sdl2Sharp.Examples.HelloSdl\Vitimiti.Sdl2Sharp.Examples.HelloSdl.csproj", "{616893DE-642B-4C79-AFE5-3A009FB0C83A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{A8CAF61F-7628-47AF-9BE9-836E76612E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8CAF61F-7628-47AF-9BE9-836E76612E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8CAF61F-7628-47AF-9BE9-836E76612E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616893DE-642B-4C79-AFE5-3A009FB0C83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616893DE-642B-4C79-AFE5-3A009FB0C83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616893DE-642B-4C79-AFE5-3A009FB0C83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616893DE-642B-4C79-AFE5-3A009FB0C83A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{616893DE-642B-4C79-AFE5-3A009FB0C83A} = {6F0CF140-BB6E-46DC-A834-343B1A3B0C4C}
 	EndGlobalSection
 EndGlobal
