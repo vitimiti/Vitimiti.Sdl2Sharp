@@ -11,6 +11,18 @@ public sealed class Systems : IDisposable
 
     public static SubSystemsFlags InitializedSystemFlags => Sdl.WasInit(SubSystemsFlags.Everything);
 
+    public static Version Version
+    {
+        get
+        {
+            Sdl.GetVersion(out var version);
+            return new Version(version.Major, version.Minor, version.Patch);
+        }
+    }
+
+    public static string Revision => Sdl.GetRevision();
+    public static Version SupportedVersion => new(2, 0, 20);
+
     public Systems(SubSystemsFlags flags)
     {
         var code = Sdl.Init(flags);
