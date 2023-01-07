@@ -45,12 +45,12 @@ internal sealed class SdlStringCustomMarshaler : ICustomMarshaler
     public IntPtr MarshalManagedToNative(object managedObj)
     {
         return managedObj is string str
-            ? Marshal.StringToCoTaskMemUni(str)
+            ? Marshal.StringToCoTaskMemUTF8(str)
             : throw new ArgumentException($"{nameof(managedObj)} is not of type {typeof(string)} but of type {managedObj.GetType()}, which is not valid.", nameof(managedObj));
     }
 
     public object MarshalNativeToManaged(IntPtr nativeData)
     {
-        return Marshal.PtrToStringUni(nativeData) ?? string.Empty;
+        return Marshal.PtrToStringUTF8(nativeData) ?? string.Empty;
     }
 }

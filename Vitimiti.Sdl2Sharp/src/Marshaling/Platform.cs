@@ -1,0 +1,12 @@
+using System.Runtime.InteropServices;
+
+using Vitimiti.Sdl2Sharp.CustomMarshalers;
+
+namespace Vitimiti.Sdl2Sharp.Marshaling;
+
+internal static partial class Sdl
+{
+    [DllImport(DllName, EntryPoint = "SDL_GetPlatform", CharSet = CharSet.Unicode)]
+    [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(SdlStringCustomMarshaler), MarshalCookie = SdlStringCustomMarshaler.LeaveAllocatedCookie)]
+    public static extern string GetPlatformName();
+}
